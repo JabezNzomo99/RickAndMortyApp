@@ -3,7 +3,6 @@ package com.example.rickandmortyapp.di
 import android.app.Application
 import androidx.room.Room
 import com.apollographql.apollo.ApolloClient
-import com.example.rickandmortyapp.MainActivityViewModel
 import com.example.rickandmortyapp.data.local.Database
 import com.example.rickandmortyapp.data.local.dao.CharacterDao
 import com.example.rickandmortyapp.data.local.dao.EpisodeDao
@@ -15,6 +14,7 @@ import com.example.rickandmortyapp.data.remote.CharactersRemoteDataSource
 import com.example.rickandmortyapp.data.remote.CharactersRemoteDataSourceImpl
 import com.example.rickandmortyapp.data.repository.CharactersRepository
 import com.example.rickandmortyapp.data.repository.CharactersRepositoryImpl
+import com.example.rickandmortyapp.ui.home.HomeFragmentViewModel
 import com.example.rickandmortyapp.util.Constants
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -74,8 +74,8 @@ import java.util.concurrent.TimeUnit
     }
 
     val viewModelModules = module {
-        viewModel<MainActivityViewModel>{
-            MainActivityViewModel(charactersRepository = get())
+        viewModel<HomeFragmentViewModel>{
+            HomeFragmentViewModel(charactersRepository = get())
         }
 
     }

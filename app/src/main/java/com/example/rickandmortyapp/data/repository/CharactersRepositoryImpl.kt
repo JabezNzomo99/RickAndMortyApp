@@ -16,8 +16,8 @@ class CharactersRepositoryImpl(private val charactersLocalDataSource: Characters
         const val DEFAULT_PAGE = 1
     }
 
-    override suspend fun fetchCharacters() {
-        when(val result=charactersRemoteDataSource.fetchCharacters(DEFAULT_PAGE)){
+    override suspend fun fetchCharacters() : Result<Boolean>{
+        return when(val result=charactersRemoteDataSource.fetchCharacters(DEFAULT_PAGE)){
             is Result.Success->{
                 val characters = result.data
                 charactersLocalDataSource.addCharacters(characters)
@@ -26,10 +26,13 @@ class CharactersRepositoryImpl(private val charactersLocalDataSource: Characters
                         episodesLocalDataSource.addEpisodes(character.episode)
                     }
                 }
+                Result.Success(true)
             }
             is Result.Error->{
+                Result.Error(result.exception)
 
             }
+            else->Result.Success(false)
 
         }
     }
