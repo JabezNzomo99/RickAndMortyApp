@@ -19,9 +19,9 @@
 
 Rick and Morty is a basic application fully written in Kotlin and leverages on key android concepts to allow users to;
 
-☑️️View All Characters in Rick & Morty
-☑️️ Search For Characters based on different criteria
-☑️️ View the episodes a particular character has appeared in
+- ☑️️View All Characters in Rick & Morty
+- ☑️️ Search For Characters based on different criteria
+- ☑️️ View the episodes a particular character has appeared in
 
 ## Features
 
@@ -35,5 +35,5 @@ Rick and Morty is a basic application fully written in Kotlin and leverages on k
 - :white_check_mark: Local Persistence with Room
 
 ## Thanks 🙏🏾
-✅[mrcsxsiq](https://github.com/mrcsxsiq/Kotlin-Pokedex) for design inspiration based on Kotlin Pokedex
-✅GraphQL API (https://rickandmortyapi.com/graphql)
+- ✅[mrcsxsiq](https://github.com/mrcsxsiq/Kotlin-Pokedex) for design inspiration based on Kotlin Pokedex
+- ✅GraphQL API (https://rickandmortyapi.com/graphql)
