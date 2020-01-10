@@ -32,6 +32,7 @@ Rick and Morty is a basic application fully written in Kotlin and leverages on k
 - :white_check_mark: GraphQL + Coroutines
 - :white_check_mark: Live data
 - :white_check_mark: Navigation
+- :white_check_mark: Coil
 - :white_check_mark: Local Persistence with Room
 
 ## Thanks 🙏🏾
