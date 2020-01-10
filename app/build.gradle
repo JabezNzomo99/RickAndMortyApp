@@ -2,14 +2,18 @@ apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
 
+apply plugin: "kotlin-kapt"
+
 apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'com.apollographql.android'
 
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.example.rickandmortyapp"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -20,6 +24,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
@@ -32,4 +41,61 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //MaterialDesign
+    implementation "com.google.android.material:material:1.2.0-alpha03"
+
+    //View pager
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    //Lottie animation
+    implementation 'com.airbnb.android:lottie:3.0.7'
+
+
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:2.1.0"
+
+
+    //Room Database
+    implementation "androidx.room:room-runtime:2.2.3"
+    implementation "androidx.room:room-ktx:2.2.3"
+    kapt "androidx.room:room-compiler:2.2.3"
+    implementation "androidx.room:room-ktx:2.2.3"
+
+
+    implementation "com.squareup.retrofit2:retrofit:2.6.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:3.14.0"
+
+
+    // Koin for Android
+    implementation "org.koin:koin-android:2.0.1"
+    // or ViewModel for AndroidX
+    implementation 'org.koin:koin-androidx-viewmodel:2.0.1'
+
+    //Live Data Coroutine Builder.
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0-rc03"
+
+    //Stetho
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+
+    api 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0-rc03'
+
+    implementation 'com.github.Binary-Finery:Bungee:2.0'
+
+    implementation "androidx.navigation:navigation-fragment-ktx:2.1.0"
+    implementation "androidx.navigation:navigation-ui-ktx:2.1.0"
+
+    //Readable Bottom Bar
+    implementation 'com.github.iammert:ReadableBottomBar:0.2'
+
+    implementation 'com.github.Pradyuman7:ChocoBar:V1.0'
+
+    //Coil
+    implementation("io.coil-kt:coil:0.8.0")
+
+    // Apollo graphql
+    implementation "com.apollographql.apollo:apollo-runtime:$rootProject.apollo_graphql_version"
+    implementation "com.apollographql.apollo:apollo-android-support:$rootProject.apollo_graphql_version"
+    implementation "com.apollographql.apollo:apollo-coroutines-support:$rootProject.apollo_graphql_version"
+
 }
