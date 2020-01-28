@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="8dp"
+    android:layout_height="120dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        android:clickable="false"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@android:color/transparent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewEpisode"
+                android:layout_width="120dp"
+                android:layout_height="105dp"
+                android:background="@drawable/episode_drawable"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:paddingStart="4dp"
+                android:paddingLeft="4dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="S01E07" />
+
+            <TextView
+                android:id="@+id/textViewEpisodeName"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:lines="2"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textViewEpisode"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="The Ricklantis Mixup" />
+
+            <TextView
+                android:id="@+id/textViewEpisodeAirDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintStart_toEndOf="@+id/textViewEpisode"
+                app:layout_constraintTop_toBottomOf="@+id/textViewEpisodeName"
+                tools:text="September 10, 2017" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>

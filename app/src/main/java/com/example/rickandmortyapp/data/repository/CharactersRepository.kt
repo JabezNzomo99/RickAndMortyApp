@@ -11,4 +11,5 @@ interface CharactersRepository {
     suspend fun getCharacters():LiveData<List<Character>>
     suspend fun searchCharacters(searchString: String):LiveData<List<Character>>
     suspend fun getEpisodesPerCharacter(characterId:String):LiveData<List<Episode>>
+    suspend fun getCharacter(characterId:String):LiveData<Character>
 }

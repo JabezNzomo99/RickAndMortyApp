@@ -24,7 +24,7 @@ interface CharacterDao {
     fun getAllCharacters():LiveData<List<Character>>
 
     @Query("SELECT * FROM characters WHERE character_id=:characterId ")
-    fun getCharacterById(characterId:Int):LiveData<Character>
+    fun getCharacterById(characterId:String):LiveData<Character>
 
     @Query("SELECT * FROM characters WHERE name LIKE :searchString OR type LIKE :searchString OR status LIKE :searchString OR gender LIKE :searchString OR species LIKE :searchString")
     fun searchCharacters(searchString: String) : LiveData<List<Character>>

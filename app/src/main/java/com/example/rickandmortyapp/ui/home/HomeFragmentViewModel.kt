@@ -20,14 +20,9 @@ class HomeFragmentViewModel(private val charactersRepository: CharactersReposito
         isFetching.postValue(false)
     }
 
-    fun fetchCharacters() = viewModelScope.launch {
-        when(val result=charactersRepository.fetchCharacters()){
-            is Result.Success->{
-                dataFetchState.value = result.data
-            }
-            is Result.Error ->{
-                dataFetchState.value = false
-            }
-        }
+    fun searchCharaters(searchString:String)= liveData {
+        emitSource(charactersRepository.searchCharacters(searchString))
     }
+
+
 }

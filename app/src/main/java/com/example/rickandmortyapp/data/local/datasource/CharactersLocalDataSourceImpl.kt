@@ -22,7 +22,7 @@ class CharactersLocalDataSourceImpl(private val characterDao: CharacterDao,
     }
 
 
-    override suspend fun getCharacter(characterId: Int): LiveData<Character> = withContext(ioDispatcher){
+    override suspend fun getCharacter(characterId: String): LiveData<Character> = withContext(ioDispatcher){
         return@withContext characterDao.getCharacterById(characterId = characterId)
     }
 

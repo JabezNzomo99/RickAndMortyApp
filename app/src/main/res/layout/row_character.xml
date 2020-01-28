@@ -6,15 +6,17 @@
     android:layout_height="140dp"
     android:layout_margin="4dp"
     android:orientation="vertical"
+    android:background="@android:color/transparent"
     android:padding="8dp">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/characterCardView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:cardBackgroundColor="@android:color/transparent"
         android:clickable="true"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
 
         >
 

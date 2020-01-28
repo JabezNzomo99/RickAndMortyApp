@@ -20,6 +20,7 @@ class CharactersRepositoryImpl(private val charactersLocalDataSource: Characters
         return when(val result=charactersRemoteDataSource.fetchCharacters(DEFAULT_PAGE)){
             is Result.Success->{
                 val characters = result.data
+                episodesLocalDataSource.clear()
                 charactersLocalDataSource.addCharacters(characters)
                 characters.forEach {character->
                     if(!character.episode.isNullOrEmpty()){
@@ -40,5 +41,6 @@ class CharactersRepositoryImpl(private val charactersLocalDataSource: Characters
     override suspend fun getCharacters(): LiveData<List<Character>> = charactersLocalDataSource.getAllCharacters()
     override suspend fun searchCharacters(searchString: String): LiveData<List<Character>> = charactersLocalDataSource.searchCharacters(searchString)
     override suspend fun getEpisodesPerCharacter(characterId: String): LiveData<List<Episode>> = episodesLocalDataSource.getEpisodesPerCharacter(characterId)
+    override suspend fun getCharacter(characterId: String): LiveData<Character> = charactersLocalDataSource.getCharacter(characterId = characterId )
 
 }

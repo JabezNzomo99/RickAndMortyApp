@@ -8,19 +8,52 @@
     android:fitsSystemWindows="true"
     tools:context=".ui.home.HomeFragment">
 
-   <androidx.recyclerview.widget.RecyclerView
-       android:id="@+id/recyclerView"
+
+   <com.google.android.material.appbar.AppBarLayout
        android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:overScrollMode="never"
-       android:paddingStart="8dp"
-       android:paddingEnd="8dp"
-       android:paddingBottom="8dp"
-       android:scrollbars="vertical"
-       app:layoutManager="GridLayoutManager"
-       app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-       tools:itemCount="6"
-       tools:listitem="@layout/row_character"
-       tools:spanCount="2"
-       />
+       android:layout_height="wrap_content"
+      >
+
+      <com.google.android.material.card.MaterialCardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:cardElevation="4dp"
+          app:cardCornerRadius="4dp"
+
+          >
+
+         <androidx.appcompat.widget.SearchView
+             android:id="@+id/searchView"
+             android:layout_width="match_parent"
+             app:searchIcon="@drawable/ic_search"
+             android:layout_height="wrap_content"
+             app:queryHint="Search Character"
+             style="@style/SearchViewStyle"
+             android:inputType="text"
+
+             />
+
+      </com.google.android.material.card.MaterialCardView>
+
+   </com.google.android.material.appbar.AppBarLayout>
+
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/recyclerView"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:overScrollMode="never"
+          android:paddingStart="8dp"
+          android:paddingEnd="8dp"
+          android:paddingBottom="8dp"
+          android:scrollbars="vertical"
+          app:layoutManager="GridLayoutManager"
+          app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+          tools:itemCount="6"
+          tools:listitem="@layout/row_character"
+          tools:spanCount="2"
+          />
+
+
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

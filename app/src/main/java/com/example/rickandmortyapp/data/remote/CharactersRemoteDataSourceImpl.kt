@@ -12,7 +12,7 @@ import kotlinx.coroutines.withContext
 import java.lang.Exception
 
 class CharactersRemoteDataSourceImpl(private val apolloClient: ApolloClient,
-                                     private val ioDispatcher: CoroutineDispatcher = Dispatchers.Main): CharactersRemoteDataSource {
+                                     private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO): CharactersRemoteDataSource {
 
     val characters = mutableListOf<Character>()
 

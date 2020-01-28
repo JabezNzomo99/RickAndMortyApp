@@ -1,7 +1,13 @@
 <resources>
-    <string name="app_name">RickAndMortyApp</string>
+    <string name="app_name">Rick Morty</string>
 
 
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about">About</string>
+    <string name="episodes">Episodes</string>
+    <string name="rick_morty"><![CDATA[Rick & Morty]]></string>
 
 </resources>

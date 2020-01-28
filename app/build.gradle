@@ -13,7 +13,7 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.example.rickandmortyapp"
-        minSdkVersion 16
+        minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -105,5 +105,12 @@ dependencies {
     implementation "com.apollographql.apollo:apollo-runtime:$rootProject.apollo_graphql_version"
     implementation "com.apollographql.apollo:apollo-android-support:$rootProject.apollo_graphql_version"
     implementation "com.apollographql.apollo:apollo-coroutines-support:$rootProject.apollo_graphql_version"
+
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
+    implementation 'com.miguelcatalan:materialsearchview:1.4.0'
+
+
+
+
 
 }

@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
+import coil.request.CachePolicy
 import coil.transform.CircleCropTransformation
 import com.example.rickandmortyapp.R
 import com.example.rickandmortyapp.data.model.Character
@@ -27,8 +28,7 @@ class CharacterAdapter(private val characters:List<Character>,
                 crossfade(true)
                 placeholder(R.drawable.ic_morty)
                 transformations(CircleCropTransformation())
-
-
+                diskCachePolicy(CachePolicy.ENABLED)
             }
             itemView.characterCardView.setOnClickListener {
                 itemClickListener.onClick(character)
